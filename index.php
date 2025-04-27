@@ -24,6 +24,42 @@
 </div>
 
 <div id="main-content" style="display: none;">
+    <div class="container">
+
+        <div class="slides">
+            <h1>Les glaneurs de carton</h1>
+            <video autoplay muted loop>
+                <source src="video/soleil.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="slides slide1">
+            <div id="visionner">
+                <button id="close-visionner">X</button>
+                <video controls>
+                    <source src="video/soleil.mp4" type="video/mp4" />
+                </video></div>
+            <h2>Chapitre 1</h2>
+            <div class="sliderButton">
+                <div class="point1 full"></div>
+                <div class="point2 empty"></div>
+            </div>
+
+            <div id="info">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <video autoplay muted loop>
+                <source src="video/pluie.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div class="slides">
+            <video autoplay muted loop>
+                <source src="video/pont.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+    </div>
 </div>
 
 <script src="js/script.js"></script>
