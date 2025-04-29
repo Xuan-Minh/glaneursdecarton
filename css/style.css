@@ -251,7 +251,8 @@ h2{
 
 
 
-.testsarah{
+
+.list{
     position: absolute;
     color: white;
     top: 30%;
@@ -259,18 +260,4 @@ h2{
     right: 20%;
     z-index: 10;
     display:none;
-}
-
-
-
-
-/*.text{
-blablabla
-    position: absolute;
-    color: white;
-    top: 30%;
-    left:60%;
-    right: 20%;
-    z-index: 10;
-    display:none;
-}*/
+}   
