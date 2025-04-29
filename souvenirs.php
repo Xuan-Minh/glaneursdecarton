@@ -43,11 +43,10 @@
     }
 
     souvenirs.forEach((souvenir, index) => {
-        // Position de départ aléatoire
         let top = getRandomNumber(0, window.innerHeight - souvenir.offsetHeight);
         let left = getRandomNumber(0, window.innerWidth - souvenir.offsetWidth);
-        let speedX = getRandomNumber(-1, 1);
-        let speedY = getRandomNumber(-1, 1);
+        let speedX = getRandomNumber(-2, 2);
+        let speedY = getRandomNumber(-2, 2);
 
         souvenir.style.top = `${top}px`;
         souvenir.style.left = `${left}px`;
@@ -57,20 +56,20 @@
             left += speedX;
 
             // Rebondir sur les bords
-            if (top < 0) {
+            if (top <= 0) {
                 top = 0;
-                speedY = -speedY;
-            } else if (top > window.innerHeight - souvenir.offsetHeight) {
+                speedY = Math.abs(speedY);
+            } else if (top >= window.innerHeight - souvenir.offsetHeight) {
                 top = window.innerHeight - souvenir.offsetHeight;
-                speedY = -speedY;
+                speedY = -Math.abs(speedY);
             }
 
-            if (left < 0) {
+            if (left <= 0) {
                 left = 0;
-                speedX = -speedX;
-            } else if (left > window.innerWidth - souvenir.offsetWidth) {
+                speedX = Math.abs(speedX);
+            } else if (left >= window.innerWidth - souvenir.offsetWidth) {
                 left = window.innerWidth - souvenir.offsetWidth;
-                speedX = -speedX;
+                speedX = -Math.abs(speedX);
             }
 
             souvenir.style.top = `${top}px`;
@@ -88,7 +87,7 @@
             if (audioAmbiance.currentTime < start || audioAmbiance.currentTime > end) {
                 audioAmbiance.currentTime = start;
             }
-            audioAmbiance.volume = 0.5; // Augmente le volume au survol
+            audioAmbiance.volume = 0.5;
             if (!isPlaying) {
                 audioAmbiance.play();
                 isPlaying = true;
@@ -96,15 +95,13 @@
         });
 
         souvenir.addEventListener('mouseleave', () => {
-            audioAmbiance.volume = 0.1; // Baisse le volume quand le curseur quitte
+            audioAmbiance.volume = 0.1;
         });
     });
 
-    // Assure que l'ambiance sonore démarre en sourdine
     audioAmbiance.volume = 0.1;
     audioAmbiance.play().catch(error => {
-        console.warn("Lecture automatique de l'audio bloquée par le navigateur.", error);
-        // Vous pourriez ajouter un bouton pour démarrer l'audio si la lecture automatique est bloquée
+        console.warn("Erreur lors de la lecture de l'audio :", error);
     });
 </script>
 </body>
