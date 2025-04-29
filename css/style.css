@@ -246,9 +246,6 @@ h2{
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 10;
-    display:flex;
     justify-content:space-around;
 }
 
@@ -259,3 +256,13 @@ h2{
 
 
 
+/*.text{
+
+    position: absolute;
+    color: white;
+    top: 30%;
+    left:60%;
+    right: 20%;
+    z-index: 10;
+    display:none;
+}*/
