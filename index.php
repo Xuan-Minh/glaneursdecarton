@@ -63,5 +63,6 @@
 </div>
 
 <script src="js/script.js"></script>
+<script src="js/jquery-3.1.0.min.js "></script>
 </body>
 </html>
