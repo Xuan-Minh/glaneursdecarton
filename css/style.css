@@ -252,7 +252,13 @@ h2{
 
 
 
-.list{
+
+
+
+
+<<<<<<< HEAD
+/*.text{
+
     position: absolute;
     color: white;
     top: 30%;
@@ -260,4 +266,6 @@ h2{
     right: 20%;
     z-index: 10;
     display:none;
-}   
+}*/
+=======
+>>>>>>> parent of 53fdc49 (test sarah first commit :3)
